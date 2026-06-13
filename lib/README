@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 youngqi
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# This file is intentionally left empty.
+# Library dependencies are managed via platformio.ini.
+# Place any custom libraries in the lib/ directory.
