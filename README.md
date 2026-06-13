@@ -38,8 +38,8 @@ ESP32/ESP8266 系列芯片通用硬件信息检测项目。自动识别芯片型
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/yourusername/esp32-hardware-info.git
-cd esp32-hardware-info
+git clone https://github.com/YOUNQI-CWP/ESP_HWinfo.git
+cd ESP_HWinfo
 ```
 
 ### 2. 安装 PlatformIO
@@ -79,7 +79,7 @@ pio device monitor
 ## 项目结构
 
 ```
-esp32-hardware-info/
+ESP_HWinfo/
 ├── src/
 │   ├── main.cpp                  # 入口点（条件编译外设初始化）
 │   └── hal_info/
