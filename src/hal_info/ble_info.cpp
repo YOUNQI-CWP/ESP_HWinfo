@@ -54,7 +54,6 @@ void bleInfoInit(BleInfo& info) {
 #else
     info.controllerStatus = 3;
     info.initialized = false;
-    info.deviceName = "";
     info.address = "";
     info.mtu = 0;
     info.txPower = 0;

@@ -15,8 +15,10 @@ void flashInfoInit(FlashInfo& info) {
         case FM_QOUT:      info.modeStr = "QOUT (Quad Output)";   break;
         case FM_DIO:       info.modeStr = "DIO (Dual I/O)";       break;
         case FM_DOUT:      info.modeStr = "DOUT (Dual Output)";   break;
+#if !defined(ESP8266)
         case FM_FAST_READ: info.modeStr = "FAST_READ (Single)";    break;
         case FM_SLOW_READ: info.modeStr = "SLOW_READ (Single)";    break;
+#endif
         default:           info.modeStr = "UNKNOWN";               break;
     }
 }
@@ -27,5 +29,9 @@ void flashInfoPrint(const FlashInfo& info) {
     Serial.printf("Flash 频率:   %d MHz\n", info.speedHz / 1000000);
     Serial.printf("可选频率:     40 MHz 80 MHz 120 MHz\n");
     Serial.printf("Flash 模式:   %s\n", info.modeStr);
-    Serial.printf("可选模式:     QIO QOUT DIO DOUT FAST_READ SLOW_READ\n");
+    Serial.printf("可选模式:     QIO QOUT DIO DOUT");
+#if !defined(ESP8266)
+    Serial.printf(" FAST_READ SLOW_READ");
+#endif
+    Serial.println();
 }
